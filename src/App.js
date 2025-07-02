@@ -5,10 +5,10 @@ import "./App.css";
 export default function App() {
   return (
     <div className="App">
-      <p>Weather</p>
-      <Weather />
+      <div className="container">
+        <p>Weather</p>
+        <Weather />
+      </div>
     </div>
   );
 }
-
-
