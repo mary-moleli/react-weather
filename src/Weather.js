@@ -17,7 +17,8 @@ export default function Weather(props) {
       city: response.data.city,
       country: response.data.country,
       date: new Date(response.data.time * 1000),
-      iconUrl: response.data.condition.icon_url,
+      iconUrl: `https://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon_url}.png`,
+      icon: response.data.condition.icon,
     });
   }
   function search() {
@@ -28,6 +29,7 @@ export default function Weather(props) {
   }
   function handleSubmit(event) {
     event.preventDefault();
+    search();
   }
 
   function handleCityChange(event) {
@@ -65,10 +67,7 @@ export default function Weather(props) {
         </ul>
         <div className="row">
           <div className="col-6">
-            <img
-              src="https://assets.msn.com/weathermapdata/1/static/weather/Icons/taskbar_v10/Condition_Card/MostlyCloudyNightV2.svg"
-              alt="Mostly Cloudy"
-            />
+            <img src={weatherData.iconUrl} alt={weatherData.icon} />
             <span className="temperature">{weatherData.temperature}</span>
             <span className="unit">°C</span>
           </div>
