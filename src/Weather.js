@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
 import FormatDate from "./FormateDate";
+import WeatherIcon from "./Icons";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -17,7 +18,7 @@ export default function Weather(props) {
       city: response.data.city,
       country: response.data.country,
       date: new Date(response.data.time * 1000),
-      iconUrl: `https://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon_url}.png`,
+      iconUrl: `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`,
       icon: response.data.condition.icon,
     });
   }
@@ -67,15 +68,13 @@ export default function Weather(props) {
         </ul>
         <div className="row">
           <div className="col-6">
-            <img src={weatherData.iconUrl} alt={weatherData.icon} />
-            <span className="temperature">{weatherData.temperature}</span>
-            <span className="unit">°C</span>
-          </div>
-          <div className="col-6">
-            <ul>
-              <li>Humidity: {weatherData.humidity}%</li>
-              <li>Wind: {weatherData.wind}km/hr</li>
-            </ul>
+            <WeatherIcon code={weatherData.iconUrl} />
+            <div className="col-6">
+              <ul>
+                <li>Humidity: {weatherData.humidity}%</li>
+                <li>Wind: {weatherData.wind}km/hr</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
