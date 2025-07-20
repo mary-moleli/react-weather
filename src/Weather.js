@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
 import FormatDate from "./FormateDate";
-import WeatherIcon from "./Icon";
+import WeatherIcon from "./IconsFile";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -60,6 +60,7 @@ export default function Weather(props) {
         <h1>
           {weatherData.city},{weatherData.country}
         </h1>
+
         <ul>
           <li>
             <FormatDate date={weatherData.date} />
@@ -69,7 +70,7 @@ export default function Weather(props) {
         <div className="row">
           <div className="col-6">
             <WeatherIcon code={weatherData.icon} />
-            <div className="col-6">
+            <div className="float-right col-6">
               <ul>
                 <li>Humidity: {weatherData.humidity}%</li>
                 <li>Wind: {weatherData.wind}km/hr</li>
