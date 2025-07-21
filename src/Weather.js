@@ -69,8 +69,10 @@ export default function Weather(props) {
         </ul>
         <div className="row">
           <div className="col-6">
-            <WeatherIcon code={weatherData.icon} />
-            <div className="float-right col-6">
+            <div className="clearfix">
+              <WeatherIcon code={weatherData.icon} />
+            </div>
+            <div className="float-right">
               <ul>
                 <li>Humidity: {weatherData.humidity}%</li>
                 <li>Wind: {weatherData.wind}km/hr</li>
