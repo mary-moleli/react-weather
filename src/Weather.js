@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
 import FormatDate from "./FormateDate";
-import WeatherIcon from "./IconsFile";
+import WeatherIcon from "./WeatherIcon";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -18,7 +18,6 @@ export default function Weather(props) {
       city: response.data.city,
       country: response.data.country,
       date: new Date(response.data.time * 1000),
-      iconUrl: `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`,
       icon: response.data.condition.icon,
     });
   }
