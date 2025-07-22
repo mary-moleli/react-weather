@@ -33,10 +33,14 @@
   font-weight: 400;
 }
 .Weather .unit {
-  color: rgb(33, 33, 33);
-  font-size: 16px;
-  font-weight: 400;
+  color: rgb(219, 54, 54);
+  font-size: 22px;
+  font-weight: 500;
   position: relative;
   line-height: 1;
   top: -24px;
+}
+.Weather .icon {
+  margin-left: -220px;
+  margin-bottom: -70px;
 }

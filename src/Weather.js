@@ -66,17 +66,22 @@ export default function Weather(props) {
           </li>
           <li>{weatherData.description}</li>
         </ul>
-        <div className="row">
+        <div className="row mt-3">
           <div className="col-6">
-            <div className="clearfix">
+            <div className="icon">
               <WeatherIcon code={weatherData.icon} />
             </div>
-            <div className="float-right">
-              <ul>
-                <li>Humidity: {weatherData.humidity}%</li>
-                <li>Wind: {weatherData.wind}km/hr</li>
-              </ul>
+
+            <div className="numbers">
+              <span className="temperature">{weatherData.temperature}</span>
+              <span className="unit">°C</span>
             </div>
+          </div>
+          <div className="col-6">
+            <ul>
+              <li>Humidity: {weatherData.humidity}%</li>
+              <li>Wind: {weatherData.wind}km/hr</li>
+            </ul>
           </div>
         </div>
       </div>
