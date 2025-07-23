@@ -6,6 +6,15 @@
   height: 40vmin;
   pointer-events: none;
 }
+.App .name {
+  font-size: 30px;
+  margin-top: 20px;
+  font: bold;
+  color: rgb(207, 86, 49);
+}
+.App .footer {
+  margin-top: 20px;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
