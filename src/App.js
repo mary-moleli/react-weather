@@ -11,18 +11,27 @@ export default function App() {
         <footer className="footer">
           <p>
             This project was coded by{" "}
-            <a href="https://github.com/mary-moleli" target="_blank">
+            <a
+              href="https://github.com/mary-moleli"
+              target="_blank"
+              rel="noreferrer"
+            >
               Mary Moleli
             </a>{" "}
             and is{" "}
             <a
               href="https://github.com/mary-moleli/react-weather"
               target="_blank"
+              rel="noreferrer"
             >
               on GitHub
             </a>{" "}
             and{" "}
-            <a href="https://warm-khapse-8b6f94.netlify.app/" target="_blank">
+            <a
+              href="https://warm-khapse-8b6f94.netlify.app/"
+              target="_blank"
+              rel="noreferrer"
+            >
               hosted on Netlify
             </a>
           </p>
