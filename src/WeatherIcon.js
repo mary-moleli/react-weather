@@ -17,7 +17,7 @@ export default function WeatherIcon(props) {
     "rain-day": "RAIN",
     "rain-night": "RAIN",
     "thunderstorm-day": "RAIN",
-    "thunderstorm-night'": "RAIN",
+    "thunderstorm-night": "RAIN",
     "snow-day": "SNOW",
     "snow-night": "SNOW",
     "mist-day": "FOG",
@@ -28,7 +28,7 @@ export default function WeatherIcon(props) {
     <ReactAnimatedWeather
       icon={codeMapping[props.code]}
       color="#b97d2dff"
-      size={50}
+      size={44}
       animate={true}
     />
   );

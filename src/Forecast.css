@@ -1,0 +1,11 @@
+.Forecast {
+  text-align: center;
+}
+.temp-min {
+  opacity: 0.8;
+  margin-left: 5px;
+}
+span.temp-max {
+  color: rgba(5, 143, 5, 0.984);
+  font-weight: bold;
+}

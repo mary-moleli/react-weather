@@ -4,6 +4,7 @@ import "./Weather.css";
 import FormatDate from "./FormateDate";
 import WeatherIcon from "./WeatherIcon";
 import TemperatureConvert from "./TemperatureConvert";
+import WeatherForecast from "./WeatherForecast";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -70,7 +71,7 @@ export default function Weather(props) {
         <div className="row mt-3">
           <div className="col-6">
             <div className="icon">
-              <WeatherIcon code={weatherData.icon} />
+              <WeatherIcon code={weatherData.icon} className="icon-img" />
             </div>
             <TemperatureConvert celsius={weatherData.temperature} />
           </div>
@@ -80,6 +81,7 @@ export default function Weather(props) {
               <li>Wind: {weatherData.wind}km/hr</li>
             </ul>
           </div>
+          <WeatherForecast />
         </div>
       </div>
     );

@@ -1,5 +1,6 @@
 import React from "react";
 import Weather from "./Weather";
+
 import "./App.css";
 
 export default function App() {
@@ -8,6 +9,7 @@ export default function App() {
       <div className="container">
         <p className="name">Mary's React Weather</p>
         <Weather defaultCity="Istanbul" />
+
         <footer className="footer">
           <p>
             This project was coded by{" "}
