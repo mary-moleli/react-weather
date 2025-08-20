@@ -26,10 +26,10 @@
 
 .Weather .temperature {
   font-weight: bold;
-  color: rgb(33, 33, 33);
+  color: rgb(25, 59, 82);
   font-size: 64px;
   line-height: 64px;
-  margin-left: 5px;
+
   font-weight: 400;
 }
 .Weather .unit {
@@ -40,7 +40,37 @@
   line-height: 1;
   top: -24px;
 }
-.icon {
-  margin-left: -220px;
-  margin-top: -20px;
+
+.temperature-section {
+  display: flex;
+  align-items: first baseline;
+  justify-content: flex-start; /* keep them aligned left inside col */
+  margin-left: 40px;
+}
+
+.temperature-section .icon-img {
+  width: 50px; /* adjust size */
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+.humidity-wind {
+  text-align: center; /* center text */
+  margin-left: 60%; /* ✅ shifts block towards Mon */
+  margin-top: -50px; /* pulls it up closer if needed */
+}
+
+.forecast-section {
+  margin-top: 40px; /* increase this to push forecasts lower */
+}
+
+/* Optional: Add more spacing inside each forecast card */
+.Forecast-day {
+  margin-bottom: 10px;
+  color: rgb(241, 135, 178);
+  font-weight: bold;
+}
+
+.Forecast-temp {
+  margin-top: 5px;
 }

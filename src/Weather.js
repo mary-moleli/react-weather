@@ -21,6 +21,7 @@ export default function Weather(props) {
       country: response.data.country,
       date: new Date(response.data.time * 1000),
       icon: response.data.condition.icon,
+      coordinates: response.data.coordinates,
     });
   }
   function search() {
@@ -69,19 +70,20 @@ export default function Weather(props) {
           <li>{weatherData.description}</li>
         </ul>
         <div className="row mt-3">
-          <div className="col-6">
-            <div className="icon">
-              <WeatherIcon code={weatherData.icon} className="icon-img" />
-            </div>
+          <div className="col-6 temperature-section">
+            <WeatherIcon code={weatherData.icon} className="icon-img" />
+
             <TemperatureConvert celsius={weatherData.temperature} />
           </div>
-          <div className="col-6">
-            <ul>
-              <li>Humidity: {weatherData.humidity}%</li>
-              <li>Wind: {weatherData.wind}km/hr</li>
-            </ul>
-          </div>
-          <WeatherForecast />
+        </div>
+        <div className="humidity-wind">
+          <ul>
+            <li>Humidity: {weatherData.humidity}%</li>
+            <li>Wind: {weatherData.wind}km/hr</li>
+          </ul>
+        </div>
+        <div className="forecast-section">
+          <WeatherForecast coordinates={weatherData.coordinates} />
         </div>
       </div>
     );
